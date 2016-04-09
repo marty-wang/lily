@@ -1,4 +1,4 @@
-# Lily - Your personal assitant
+# Lily - Your personal assistant
 
 (Below assumes you know how to create AWS Lambda and Alexa Skill)
 
