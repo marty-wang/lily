@@ -16,7 +16,7 @@ app.intent(
     'GetMyBusIntent',
     {
         "slots":{ "destination": "AMAZON.LITERAL" },
-        "utterances": Object.keys(trips).map((destination) => `where my bus to {${destination}|destination} is`)
+        "utterances": Object.keys(trips).map((destination) => `where is my bus to {${destination}|destination}`)
     },
     (request, response) => {
         const destination = (request.slot('destination') || "").toLowerCase();

@@ -10,7 +10,7 @@ var appName = 'Lily';
 var app = new alexa.app(appName);
 app.intent('GetMyBusIntent', {
     "slots": { "destination": "AMAZON.LITERAL" },
-    "utterances": Object.keys(trips).map(function (destination) { return ("where my bus to {" + destination + "|destination} is"); })
+    "utterances": Object.keys(trips).map(function (destination) { return ("where is my bus to {" + destination + "|destination}"); })
 }, function (request, response) {
     var destination = (request.slot('destination') || "").toLowerCase();
     var buses = trips[destination];
