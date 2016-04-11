@@ -3,6 +3,7 @@
         "oneBusAway": "YOUR_KEY"
     },
     "trips": {
+        // add your trips here
         "redmond": [{ "stopId": "1_682", "bus": "545E" }]
     }
 }
