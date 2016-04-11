@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "alexa-app": "^2.3.2",
+    "config": "^1.20.1",
     "q": "^1.4.1"
   },
   "devDependencies": {},

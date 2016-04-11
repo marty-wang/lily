@@ -1,9 +1,10 @@
 "use strict";
-var Config = require("./config");
 var Q = require("q");
 var Request = require("./request");
+var config = require("config");
 var busArrivalUrl = function (stopId) {
-    return "http://api.pugetsound.onebusaway.org/api/where/arrivals-and-departures-for-stop/" + stopId + ".json?key=" + Config.ONE_BUS_AWAY_KEY;
+    var key = config.get("apiKeys.oneBusAway");
+    return "http://api.pugetsound.onebusaway.org/api/where/arrivals-and-departures-for-stop/" + stopId + ".json?key=" + key;
 };
 var getBusArrival = function (stopId, busShortName, destination) {
     var requestUrl = busArrivalUrl(stopId);

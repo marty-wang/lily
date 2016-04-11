@@ -1,9 +1,11 @@
-import * as Config from "./config";
 import * as Q from "q";
 import * as Request from "./request";
 
+const config = require("config");
+
 const busArrivalUrl = (stopId) => {
-    return `http://api.pugetsound.onebusaway.org/api/where/arrivals-and-departures-for-stop/${stopId}.json?key=${Config.ONE_BUS_AWAY_KEY}`;
+    const key = config.get("apiKeys.oneBusAway");
+    return `http://api.pugetsound.onebusaway.org/api/where/arrivals-and-departures-for-stop/${stopId}.json?key=${key}`;
 }
 
 interface BusArrival {

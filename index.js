@@ -1,10 +1,8 @@
 /// <reference path="./typings/tsd.d.ts" />
 "use strict";
 var Onebus = require("./onebus");
-// Add your own trips here
-var trips = {
-    "redmond": [{ stopId: "1_682", bus: "545E" }]
-};
+var config = require("config");
+var trips = config.get("trips");
 var alexa = require('alexa-app');
 var appName = 'Lily';
 var app = new alexa.app(appName);

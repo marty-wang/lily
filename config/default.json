@@ -1,0 +1,8 @@
+{
+    "apiKeys": {
+        "oneBusAway": "YOUR_KEY"
+    },
+    "trips": {
+        "redmond": [{ "stopId": "1_682", "bus": "545E" }]
+    }
+}

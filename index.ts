@@ -2,10 +2,8 @@
 
 import * as Onebus from "./onebus";
 
-// Add your own trips here
-const trips: { [key: string]: Onebus.BusesAtStop | Onebus.BusAtStop[] } = {
-    "redmond": [{ stopId: "1_682", bus: "545E" }],
-};
+const config = require("config");
+const trips: { [key: string]: Onebus.BusesAtStop | Onebus.BusAtStop[] } = config.get("trips");
 
 const alexa = require('alexa-app');
 
